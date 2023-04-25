@@ -1,16 +1,7 @@
-export const App = () => {
+import { MainRouter } from '../navigation/MainRouter';
+
+export const AppContainer = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      Pizza
-    </div>
+    <MainRouter/>
   );
 };
