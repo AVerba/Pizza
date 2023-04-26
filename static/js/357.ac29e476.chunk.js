@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkPizza=self.webpackChunkPizza||[]).push([[357],{357:function(n,i,a){a.r(i),a.d(i,{default:function(){return c}});var e="MainView_main__U60mA",u=a(184),c=function(){return(0,u.jsx)("div",{className:e,children:(0,u.jsx)("h1",{children:"Main Pizza page"})})}}}]);
+//# sourceMappingURL=357.ac29e476.chunk.js.map
