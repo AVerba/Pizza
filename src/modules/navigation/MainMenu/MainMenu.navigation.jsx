@@ -7,7 +7,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalPizzaIcon from '@mui/icons-material/LocalPizza';
 export const MainMenu = () => {
   const [active, setActive] = useState('Home');
-  const [qntOrder, setQntOrder] = useState(1);
+  //const [qntOrder, setQntOrder] = useState(1);
+  const qntOrder=1;
   const handleSelect = eventKey => setActive(eventKey);
   return (
     <Nav className={styles.menu} variant='pills' activeKey={active} onSelect={handleSelect}>
