@@ -1,0 +1,18 @@
+
+.menu{
+  display: flex;
+}
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color:dimgrey;
+  span{
+    padding: 0 5px  0 12px ;
+  }
+}
+
+.item:not(:last-child) {
+  margin-right: 20px;
+}

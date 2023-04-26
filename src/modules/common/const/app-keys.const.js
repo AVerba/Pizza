@@ -3,3 +3,7 @@ export const ROUTER_KEYS = {
   ORDER: '/order',
   NOTFOUND: '*'
 };
+export const LINK_KEYS = {
+  ROOT: '/',
+  ORDER: '/order'
+};
