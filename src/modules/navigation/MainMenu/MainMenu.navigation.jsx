@@ -5,10 +5,14 @@ import { useState } from 'react';
 import { LINK_KEYS } from '../../common/const/app-keys.const';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalPizzaIcon from '@mui/icons-material/LocalPizza';
+import { useSelector } from 'react-redux';
+
+
+import { getOrder } from '../../redux/ordersSlice';
 export const MainMenu = () => {
   const [active, setActive] = useState('Home');
-  //const [qntOrder, setQntOrder] = useState(1);
-  const qntOrder=1;
+  const { order } = useSelector(getOrder);
+console.log(order)
   const handleSelect = eventKey => setActive(eventKey);
   return (
     <Nav className={styles.menu} variant='pills' activeKey={active} onSelect={handleSelect}>
@@ -29,8 +33,8 @@ export const MainMenu = () => {
           eventKey='Order'
           to={LINK_KEYS.ORDER}
         > Order
-          <span>{qntOrder}</span>
-          <ShoppingCartIcon style={qntOrder === 0 ? ({ color: 'grey' }) : ({ color: 'tomato' })} />
+          <span>{order.length}</span>
+          <ShoppingCartIcon style={order.length === 0 ? ({ color: 'grey' }) : ({ color: 'tomato' })} />
         </Nav.Link>
       </Nav.Item>
     </Nav>

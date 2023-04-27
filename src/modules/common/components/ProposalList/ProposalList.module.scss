@@ -1,0 +1,24 @@
+@import '../../../theme/main.scss';
+.title{
+  width: 100%;
+  text-align: center;
+  color: #afb1b8;
+}
+.list{background : inherit;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-row-gap: 25px;
+  grid-column-gap: 25px;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include for-size(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 22px;
+  }
+  @include for-size(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 32px;
+  }
+}
+
