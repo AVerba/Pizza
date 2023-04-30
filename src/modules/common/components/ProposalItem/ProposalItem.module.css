@@ -1,0 +1,159 @@
+@charset "UTF-8";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+a,
+address {
+  text-decoration: none;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+._img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  fill: collection-color(social--link--color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+._flex-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+._backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s;
+}
+
+._is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+._active {
+  color: collection-color(action-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.section {
+  padding: 94px 0;
+}
+
+/*=============== Центрирование ===================*/
+.item__card {
+  background-color: #afb1b8;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.item__card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.item__card:hover .item__textOverlay {
+  transform: translatey(0);
+}
+.item__control {
+  display: grid;
+  grid-row-gap: 25px;
+  grid-column-gap: 25px;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 10px 0;
+  align-items: center;
+}
+.item__img__overlay {
+  position: relative;
+  overflow: hidden;
+}
+.item__textOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  color: #ffff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: calc(28 / 18);
+  padding: 63px 24px;
+  transform: translatey(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 319px) {
+  .item__textOverlay {
+    color: #ffff;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: calc(26 / 12);
+    padding: 38px 24px;
+  }
+}
+
+.order__addBtn {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #ec450a;
+  color: #f5f4fa;
+}
+
+.CntrBtn {
+  background-color: inherit;
+  width: 45px;
+  height: 45px;
+  border: none;
+  margin: 0 15px;
+}
+
+.order__conrtol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=ProposalItem.module.css.map */

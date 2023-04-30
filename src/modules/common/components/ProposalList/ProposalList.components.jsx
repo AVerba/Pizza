@@ -4,7 +4,7 @@ import { ProposalItem } from '../ProposalItem';
 
 
 export const ProposalList = ({ products }) => {
-  console.log(products);
+
   return (
     <Container>
       <h3 className={styles.title}>Try our best menu</h3>

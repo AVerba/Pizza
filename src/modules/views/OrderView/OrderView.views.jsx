@@ -1,10 +1,16 @@
 import styles from './OrderView.module.scss';
+import {Container} from "../../common/components/Container";
+import {OrderList} from "../../common/components/OrderList";
+import {products} from "../../services/products";
 
 const OrderView = () => {
   return (
 
     <div className={styles.orderView}>
-      <h1>Order page</h1>
+      <Container>
+        <OrderList products={products}/>
+      </Container>
+
 
 
     </div>

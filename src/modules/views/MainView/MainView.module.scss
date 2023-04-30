@@ -3,15 +3,14 @@
   background-image:  url("../../../assets/images/pizzaBg.jpg");
   @include  background-pos();
   background-attachment: fixed;
-  padding-top: 80px;
+  padding-top: 114px;
 
-  height: 250vh;
+  height: 700vh;
   display: flex;
   justify-content: center;
-/*  align-items: center;
-  font-size: 40px;
-  color: #010101;
-  position :relative;*/
+  @include for-size(tablet) {
+    height: 300vh;
+  }
 
 }
 

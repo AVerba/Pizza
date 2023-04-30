@@ -15,6 +15,14 @@
       }
     }
   }
+  &__control{
+    display: grid;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px 0;
+    align-items: center;
+  }
   &__img__overlay{
     position: relative;
     overflow: hidden;
@@ -39,4 +47,23 @@
 }
 ._overlay {
 
+}
+.order__addBtn{
+  border:none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #ec450a;
+  color: #f5f4fa;
+
+}
+.CntrBtn{
+  background-color: inherit;
+  width: 45px;
+  height: 45px;
+  border:none;
+  margin: 0 15px;
+}
+.order__conrtol{
+  display: flex;align-items: center;
+  justify-content: center;
 }

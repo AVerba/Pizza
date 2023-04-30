@@ -1,0 +1,43 @@
+@import '../../../theme/main.scss';
+.item{
+  padding: 15px 0;
+ text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #afb1b8;
+  width: 100%;
+  @include for-size(tablet) {
+  display: flex;
+
+  }
+
+  margin-bottom: 7px;
+  &__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+}
+
+.order__addBtn{
+  border:none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #ec450a;
+  color: #f5f4fa;
+
+}
+.CntrBtn{
+  background-color: inherit;
+  width: 45px;
+  height: 45px;
+  border:none;
+
+}
+.order__conrtol{
+  display: flex;align-items: center;
+  justify-content: center;
+}
+

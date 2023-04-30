@@ -9,10 +9,14 @@ import { useSelector } from 'react-redux';
 
 
 import { getOrder } from '../../redux/ordersSlice';
+import {getQntOrder} from "../../utils/utils";
 export const MainMenu = () => {
   const [active, setActive] = useState('Home');
+
   const { order } = useSelector(getOrder);
-console.log(order)
+
+  const totalItems=getQntOrder(order)
+
   const handleSelect = eventKey => setActive(eventKey);
   return (
     <Nav className={styles.menu} variant='pills' activeKey={active} onSelect={handleSelect}>
@@ -33,8 +37,12 @@ console.log(order)
           eventKey='Order'
           to={LINK_KEYS.ORDER}
         > Order
-          <span>{order.length}</span>
-          <ShoppingCartIcon style={order.length === 0 ? ({ color: 'grey' }) : ({ color: 'tomato' })} />
+
+          <span>{totalItems}</span>
+
+
+          <ShoppingCartIcon style={totalItems === 0 ? ({ color: 'grey' }) : ({ color: 'tomato' })} />
+
         </Nav.Link>
       </Nav.Item>
     </Nav>

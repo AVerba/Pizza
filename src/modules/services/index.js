@@ -1,1 +1,0 @@
-export { serviceApi } from './serviceApi';

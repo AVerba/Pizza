@@ -1,0 +1,46 @@
+@import '../../../theme/main.scss';
+.list {
+  margin-top: 114px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+
+}
+
+.totalPrice {
+
+  width: 100%;
+  padding: 10px 10px;
+  margin-bottom: 7px;
+}
+
+.orderBtn {
+  border: none;
+  background-color: #188ce8;
+  border-radius: 3px;
+  padding: 6px 10px;
+  margin-left: 10px;
+  @include for-size(tablet) {
+    margin-left: 20px;
+    padding: 6px 10px;
+
+  }
+
+}
+
+.makeOrder {
+  padding: 30px;
+ text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #afb1b8;
+  width: 100%;
+
+}
+.Orderitem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

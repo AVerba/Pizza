@@ -1,7 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-  order: [],
+  order: {},
 };
 
 export const ordersSlice = createSlice({
@@ -9,60 +9,53 @@ export const ordersSlice = createSlice({
   initialState,
 
   reducers: {
-    addOrder: (state, { payload }) => {
-
-      const foundItem = state.order.find(item => item.id === payload);
-      if (foundItem) {
-        const modifyOrder = {
-          ...state,
-          order: state.order.map(item => {
-            if (item.id === payload) {
-              return { ...item, qnt: item.qnt + 1 };
-            }
-          }),
-        };
-
-        return modifyOrder;
+    addOrder: (state, action) => {
+      const {id} = action.payload;
+      const item = state.order[id];
+      if (item) {
+        item.quantity += 1;
       } else {
-        const itemOrder = {
-          id: payload,
-          qnt: 1,
+        state.order[id] = {
+          id,
+          quantity: 1,
         };
-
-        return { ...state, order: [...state.order, itemOrder] };
-
       }
-
-
     },
-  },
-  deleteOrder: (state, { payload }) => {
-    return {
-      ...state,
-      order: state.order.filter((item) => item.id !== payload),
-    };
-  },
-  deleteItemOrder: (state, { payload }) => {
-    return state;
-  },
-  placeAnOrder: (state, _) => {
-    return { ...state, order: [] };
+    deleteItemOrder: (state, action) => {
+      const {id} = action.payload;
+      const item = state.order[id];
+      if (item) {
+        if (item.quantity === 1) {
+          delete state.order[id];
+        } else {
+          item.quantity -= 1;
+        }
+      }
+    },
+    deleteFromOrder:(state,action)=>{
+      const { id } = action.payload;
+      delete state.order[id];
+    },
+
+    makeOrder(state, _) {
+      return { ...state, order:  {} };
+    },
+
+
+
+
   },
 });
 
 export const {
   addOrder,
-  deleteOrder,
   deleteItemOrder,
-  placeAnOrder,
+  deleteFromOrder,
+  makeOrder
+
 
 } = ordersSlice.actions;
 export const getOrder = state => state.order;
 
 
-let items = [
-  { name: 'item1', value: 10 },
-  { name: 'item2', value: 20 },
-  { name: 'item3', value: 30 },
-];
 
