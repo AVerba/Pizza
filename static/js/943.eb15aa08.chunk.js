@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkPizza=self.webpackChunkPizza||[]).push([[943],{943:function(e,r,n){n.r(r),n.d(r,{default:function(){return a}});var i="OrderView_orderView__8urGJ",u=n(184),a=function(){return(0,u.jsx)("div",{className:i,children:(0,u.jsx)("h1",{children:"Order page"})})}}}]);
-//# sourceMappingURL=943.eb15aa08.chunk.js.map

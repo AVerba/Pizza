@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkPizza=self.webpackChunkPizza||[]).push([[335],{335:function(n,e,u){u.r(e),u.d(e,{default:function(){return s}});var i="NotFoundView_notFoundViews__MXLm6",t=u(184),s=function(){return(0,t.jsx)("div",{className:i,children:(0,t.jsx)("h1",{children:"Not Found View"})})}}}]);
-//# sourceMappingURL=335.2b4f61e0.chunk.js.map
