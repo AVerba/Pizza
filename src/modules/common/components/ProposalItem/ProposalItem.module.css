@@ -156,4 +156,10 @@ address {
   justify-content: center;
 }
 
+.itemPizzaLogo {
+  fill: #ffffff;
+  width: 113px;
+  margin-top: -325px;
+}
+
 /*# sourceMappingURL=ProposalItem.module.css.map */

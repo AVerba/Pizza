@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { ReactComponent as Pizza } from '../../../../assets/icons/pizza.svg';
 
 export const ProposalItem = ({item}) => {
   const dispatch = useDispatch();
@@ -25,7 +26,11 @@ export const ProposalItem = ({item}) => {
       <div className={styles.item__card}>
         <div className={styles.item__img__overlay}>
           <img className={styles._img} src={item.image} alt={item.title}/>
-          <p className={styles.item__textOverlay}>{item.description}</p>
+          <p className={styles.item__textOverlay}>
+           <p>{item.description}</p>
+            <Pizza className={styles.itemPizzaLogo} />
+          </p>
+
         </div>
         <div className={styles.item__content}>
           <h4 className={styles.item__title}>{item.title}</h4>
