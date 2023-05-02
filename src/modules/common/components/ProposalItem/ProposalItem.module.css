@@ -84,7 +84,7 @@ address {
 
 /*=============== Центрирование ===================*/
 .item__card {
-  background-color: #afb1b8;
+  background-color: rgba(249, 249, 250, 0.99);
   border-radius: 4px;
   overflow: hidden;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,6 +94,20 @@ address {
 }
 .item__card:hover .item__textOverlay {
   transform: translatey(0);
+}
+.item__content {
+  padding: 10px;
+}
+.item__title {
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  color: rgba(70, 70, 79, 0.99);
+}
+.item__price {
+  padding-top: 7px;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  color: rgba(70, 70, 79, 0.99);
 }
 .item__control {
   display: grid;
@@ -135,11 +149,18 @@ address {
 }
 
 .order__addBtn {
+  font-family: "Roboto Slab", serif;
+  font-size: 15px;
+  color: rgba(70, 70, 79, 0.99);
   border: none;
-  padding: 15px 20px;
+  padding: 12px 20px;
   border-radius: 5px;
   background-color: #ec450a;
   color: #f5f4fa;
+  cursor: pointer;
+}
+.order__addBtn:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .CntrBtn {
@@ -147,7 +168,12 @@ address {
   width: 45px;
   height: 45px;
   border: none;
-  margin: 0 15px;
+  margin: 0 7px;
+  cursor: pointer;
+}
+.CntrBtn__icon {
+  width: 35px;
+  height: 35px;
 }
 
 .order__conrtol {
@@ -160,6 +186,12 @@ address {
   fill: #ffffff;
   width: 113px;
   margin-top: -325px;
+}
+
+.display__qnt {
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  color: rgba(70, 70, 79, 0.99);
 }
 
 /*# sourceMappingURL=ProposalItem.module.css.map */

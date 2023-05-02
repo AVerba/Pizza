@@ -34,7 +34,7 @@ export const ProposalItem = ({item}) => {
         </div>
         <div className={styles.item__content}>
           <h4 className={styles.item__title}>{item.title}</h4>
-          <p className={styles.item__price}>{item.price}</p>
+          <p className={styles.item__price}>Price: {item.price} UAH</p>
           <div className={styles.item__control}>
             {!foundItem ? (
               <div className={styles.order__add}>
@@ -42,10 +42,10 @@ export const ProposalItem = ({item}) => {
               </div>
             ) : (
               <div className={styles.order__conrtol}>
-                <button className={styles.CntrBtn} onClick={addToOrder}><AddBoxIcon  style={{color: 'green'}}/></button>
-                <span> {foundItem.quantity} </span>
-                <button className={styles.CntrBtn} onClick={decrementQuantity}><IndeterminateCheckBoxIcon  style={{color: 'tomato'}}/></button>
-                <button className={styles.CntrBtn} onClick={deleteFromOrderList}><DeleteIcon /></button>
+                <button className={styles.CntrBtn} onClick={addToOrder}><AddBoxIcon className={styles.CntrBtn__icon}  style={{color: 'green'}}/></button>
+                <span className={styles.display__qnt}> {foundItem.quantity} </span>
+                <button className={styles.CntrBtn} onClick={decrementQuantity}><IndeterminateCheckBoxIcon className={styles.CntrBtn__icon}  style={{color: 'tomato'}}/></button>
+                <button className={styles.CntrBtn} onClick={deleteFromOrderList}><DeleteIcon className={styles.CntrBtn__icon} /></button>
               </div>
             )}
           </div>
