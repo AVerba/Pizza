@@ -83,27 +83,26 @@ address {
 }
 
 /*=============== Центрирование ===================*/
-.main {
-  background-image: url("../../../assets/images/pizzaBg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  padding-top: 114px;
-  height: 700vh;
-  display: flex;
-  justify-content: center;
+.list {
+  background: inherit;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-row-gap: 25px;
+  grid-column-gap: 25px;
+  grid-template-columns: repeat(1, 1fr);
 }
 @media screen and (min-width: 768px) {
-  .main {
-    height: 300vh;
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 22px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 32px;
   }
 }
 
-.title {
-  width: 100%;
-  text-align: center;
-  color: #afb1b8;
-}
-
-/*# sourceMappingURL=MainView.module.css.map */
+/*# sourceMappingURL=ProposalList.module.css.map */
