@@ -1,3 +1,9 @@
-
+.mainTitle {
+  margin: 0;
+  padding: 0;
+  font-family: "Italianno", cursive;
+  font-weight: normal;
+  font-size: 50px;
+}
 
 /*# sourceMappingURL=MainTitle.module.css.map */

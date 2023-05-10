@@ -37,10 +37,7 @@ export const MainMenu = () => {
           eventKey='Order'
           to={LINK_KEYS.ORDER}
         > Order
-
           <span>{totalItems}</span>
-
-
           <ShoppingCartIcon style={totalItems === 0 ? ({ color: 'grey' }) : ({ color: 'tomato' })} />
 
         </Nav.Link>
