@@ -10,7 +10,7 @@ import { persistor, store } from './modules/redux/store';
 ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename='Pizza'>
+        <BrowserRouter >
           <AppContainer />
         </BrowserRouter>
       </PersistGate>

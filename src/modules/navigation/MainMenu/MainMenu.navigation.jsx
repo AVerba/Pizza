@@ -1,48 +1,35 @@
-import styles from './MainMenu.module.scss';
-import Nav from 'react-bootstrap/Nav';
-import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
-import { LINK_KEYS } from '../../common/const/app-keys.const';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LocalPizzaIcon from '@mui/icons-material/LocalPizza';
-import { useSelector } from 'react-redux';
+import styles from "./MainMenu.module.scss";
+import { LINK_KEYS } from "../../common/const/app-keys.const";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import LocalPizzaIcon from "@mui/icons-material/LocalPizza";
+import { useSelector } from "react-redux";
 
 
-import { getOrder } from '../../redux/ordersSlice';
-import {getQntOrder} from "../../utils/utils";
+import { getOrder } from "../../redux/ordersSlice";
+import { getQntOrder } from "../../utils/utils";
+import { MenuLink } from "../../common/components/UI/MenuLink";
+
 export const MainMenu = () => {
-  const [active, setActive] = useState('Home');
-
   const { order } = useSelector(getOrder);
+  const totalItems = getQntOrder(order);
 
-  const totalItems=getQntOrder(order)
-
-  const handleSelect = eventKey => setActive(eventKey);
   return (
-    <Nav className={styles.menu} variant='pills' activeKey={active} onSelect={handleSelect}>
-      <Nav.Item className={styles.item}>
-        <Nav.Link
-          as={NavLink}
-          className={styles.link}
-          eventKey='Home'
-          to={LINK_KEYS.ROOT}
-        > Pizzas
-          <LocalPizzaIcon style={{ color: 'grey' }} />
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item className={styles.item}>
-        <Nav.Link
-          as={NavLink}
-          className={styles.link}
-          eventKey='Order'
-          to={LINK_KEYS.ORDER}
-        > Order
-          <span>{totalItems}</span>
-          <ShoppingCartIcon style={totalItems === 0 ? ({ color: 'grey' }) : ({ color: 'tomato' })} />
 
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
+    <nav className={styles.menu}>
+      <ul className={styles.menu__list}>
+        <li className={styles.menu__item}>
+          <MenuLink title={"Pizzas menu"} path={LINK_KEYS.ROOT} className={styles.link} activeClassName={styles.active}>
+            <LocalPizzaIcon style={{ color: "grey" }} />
+          </MenuLink>
+        </li>
+        <li className={styles.menu__item}>
+          <MenuLink title={"Your order"} path={LINK_KEYS.ORDER} className={styles.link} activeClassName={styles.active}>
+            <span>{totalItems}</span>
+            <ShoppingCartIcon style={totalItems === 0 ? ({ color: "grey" }) : ({ color: "tomato" })} />
+          </MenuLink>
+        </li>
+      </ul>
+    </nav>
   );
 
-}
+};
