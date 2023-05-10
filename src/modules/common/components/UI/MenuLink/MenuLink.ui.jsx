@@ -19,7 +19,7 @@ export const MenuLink = ({ path, className, activeClassName, title, children }) 
     </NavLink>
   );
 };
-Container.propTypes = {
+MenuLink.propTypes = {
   className: PropTypes.string,
   activeClassName:PropTypes.string,
   title:PropTypes.string.isRequired,
