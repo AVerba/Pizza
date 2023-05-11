@@ -18,12 +18,20 @@ export const MainMenu = () => {
     <nav className={styles.menu}>
       <ul className={styles.menu__list}>
         <li className={styles.menu__item}>
-          <MenuLink title={"Pizzas menu"} path={LINK_KEYS.ROOT} className={styles.link} activeClassName={styles.active}>
+          <MenuLink
+            title={"Pizzas menu"}
+            path={LINK_KEYS.ROOT}
+            className={styles.link}
+            activeClassName={styles.active}>
             <LocalPizzaIcon style={{ color: "grey" }} />
           </MenuLink>
         </li>
         <li className={styles.menu__item}>
-          <MenuLink title={"Your order"} path={LINK_KEYS.ORDER} className={styles.link} activeClassName={styles.active}>
+          <MenuLink
+            title={"Your order"}
+            path={LINK_KEYS.ORDER}
+            className={styles.link}
+            activeClassName={styles.active}>
             <span>{totalItems}</span>
             <ShoppingCartIcon style={totalItems === 0 ? ({ color: "grey" }) : ({ color: "tomato" })} />
           </MenuLink>

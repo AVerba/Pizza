@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import { MainMenu } from '../../../navigation/MainMenu';
-import { Logo } from '../Logo';
+import { Logo } from '../UI/Logo';
 import { Container } from '../Container';
 import { useEffect, useState } from 'react';
 

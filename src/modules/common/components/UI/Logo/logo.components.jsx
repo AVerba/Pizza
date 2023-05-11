@@ -1,5 +1,5 @@
 import styles from "./Logo.module.scss";
-import { ROUTER_KEYS } from "../../const/app-keys.const";
+import { ROUTER_KEYS } from "../../../const/app-keys.const";
 
 export const Logo = () => {
   return (

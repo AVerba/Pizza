@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import Loader from '../../common/components/Loader/Loader.component';
+import Loader from '../../common/components/UI/Loader/Loader.component';
 import { APP_KEYS } from '../../common/const';
 
 
